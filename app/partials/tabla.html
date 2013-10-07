@@ -1,0 +1,34 @@
+
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div>
+<h2>Ingreso de Depositos SOAT</h2>
+<p>Por favor realice el ingreso de depositos de las ventas. </p>
+<a href="#/formulario/nuevo"><i class="icon-plus-sign"></i>Nuevo Deposito</a>
+<table ng-table="tableParams" class="table">
+    <tr ng-repeat="depositosItem in depositosPaginados">
+        <td data-title="'Fecha'" sortable="'vtDepositoSOAT_fechaIngreso'">
+            {{depositosItem.vtDepositoSOAT_fechaIngreso}}
+        </td>
+        <td data-title="'Banco'" sortable="'vtDepositoSOAT_banco'">
+            {{depositosItem.vtDepositoSOAT_banco}}
+        </td>
+        <td data-title="'Cuenta'" sortable="'vtDepositoSOAT_numeroDeCuenta'">
+            {{depositosItem.vtDepositoSOAT_numeroDeCuenta}}
+        </td>
+        <td data-title="'Valor'" sortable="'vtDepositoSOAT_valorRealDeposito'">
+            {{depositosItem.vtDepositoSOAT_valorRealDeposito}}
+        </td>
+        <td data-title="'Documento'" sortable="'vtDepositoSOAT_numeroDeposito'">
+            {{depositosItem.vtDepositoSOAT_numeroDeposito}}
+        </td>
+        <td data-title="'Estado'" sortable="'vtDepositoSOAT_estado'">
+            {{depositosItem.vtDepositoSOAT_estado}}
+        </td>
+        <td>
+            <a href="#/formulario/{{depositosItem.vtDepositoSOAT_id}}"><i class="icon-pencil"></i></a>
+        </td>
+
+    </tr>
+</table>
+
+</div>

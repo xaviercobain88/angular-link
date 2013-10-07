@@ -1,0 +1,71 @@
+
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div>
+    <h2>Ingreso de Depositos SOAT</h2>
+    <p>Por favor realice el ingreso de depositos de las ventas. </p>
+
+
+    <form name="myForm">
+        <div class="row" >
+            <div class="control-group span3" ng-class="{error: myForm.fecha.$invalid}" ng-show="id" >
+                <label>Fecha</label>
+                <input type="text" name="fecha" ng-model="deposito.vtDepositoSOAT_fechaIngreso" ng-disabled="id">
+                <span ng-show="myForm.fecha.$error.required" class="help-inline">
+                    Requerido</span>
+            </div>
+
+            <div class="control-group span3" ng-class="{error: myForm.banco.$invalid}" ng-show="id">
+                <label>Banco</label>
+                <input type="text" name="banco" ng-model="deposito.vtDepositoSOAT_banco"  ng-disabled="id" >
+                <span ng-show="myForm.banco.$error.required" class="help-inline">
+                    Requerido</span>
+            </div>
+
+            <div class="control-group span3" ng-class="{error: myForm.tipoDeCuenta.$invalid}" ng-show="id">
+                <label>Tipo de Cuenta</label>
+                <input type="text" name="tipoDeCuenta" ng-model="deposito.vtDepositoSOAT_tipoDeCuenta"  ng-disabled="id" >
+                <span ng-show="myForm.tipoDeCuenta.$error.required" class="help-inline">
+                    Requerido</span>
+            </div>  
+
+            <div class="control-group span3" ng-class="{error: myForm.cuenta.$invalid}" ng-show="id">
+                <label>Cuenta</label>
+                <input type="text" name="cuenta" ng-model="deposito.vtDepositoSOAT_numeroDeCuenta"  ng-disabled="id" >
+                <span ng-show="myForm.cuenta.$error.required" class="help-inline">
+                    Requerido</span>
+            </div> 
+
+            <div class="control-group span3" ng-class="{error: myForm.valor.$invalid}">
+                <label>Valor</label>
+                <input type="text" name="valor" ng-model="deposito.vtDepositoSOAT_valorRealDeposito" required>
+                <span ng-show="myForm.valor.$error.required" class="help-inline">
+                    Requerido</span>
+            </div>
+
+            <div class="control-group span3" ng-class="{error: myForm.documento.$invalid}">
+                <label>Documento</label>
+                <input type="text" name="documento" ng-model="deposito.vtDepositoSOAT_numeroDeposito" required>
+                <span ng-show="myForm.documento.$error.required" class="help-inline">
+                    Requerido</span>
+            </div>
+            <div class="control-group span3" >
+                <label>Descripcion</label>
+                <textarea name="descripcion" ng-model="deposito.vtDepositoSOAT_descripcionDelDeposito"></textarea>
+            </div>
+
+            <br>
+        </div>
+        <div class="row" >
+            <div class="span3" >
+                <a href="#/" class="btn">Cancelar</a>
+                <button ng-click="save()" ng-disabled="myForm.$invalid"
+                        class="btn btn-primary">Guardar</button>
+                <button ng-click="delete()"
+                        ng-show="id" class="btn btn-danger">Eliminar</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+

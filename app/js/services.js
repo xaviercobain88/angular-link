@@ -4,9 +4,17 @@
 
 // Demonstrate how to register services
 // In this case it is a simple value service.
-var services = angular.module('myApp.services', []);
+var services = angular.module('myApp.services', ['ngResource']);
 
-services.value('version', '0.2');
+services.factory('VentasResumen', ['$resource', function($resource) {
+    return $resource('http://pruebascoactivas.espaciolink.com/webservices/index.php/DepositoSoat/ventasResumenAdeudado');
+
+    }]);
+
+services.factory('Deposito', ['$resource', function($resource) {
+//    return $resource('http://pruebascoactivas.espaciolink.com/webservices/index.php/DepositoSoat/deposito?  &callback=');
+        return $resource('http://pruebascoactivas.espaciolink.com/webservices/index.php/DepositoSoat/deposito/:depositoId',{ depositoId: '@deposito.vtDepositoSOAT_id' });
+    }]);
 
 
 

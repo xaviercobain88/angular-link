@@ -29,11 +29,11 @@
         <div class="navbar-inner">
             <div class="container">
                 
-                <a class="brand" href="#">Depositos SOAT - QBE</a>
+                <a class="brand" href="index.html">Depositos SOAT - QBE</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
-                        <li class="active"><a href="#/home">Home</a></li>
-                        <li ><a href="#/project_b">Ingresar</a></li>
+                        <li class="active"><a href="index.html">Inicio</a></li>
+                        <li ><a href="deposito.html">Ingresar Deposito</a></li>
                        
 
                     </ul>
@@ -42,10 +42,26 @@
         </div>
     </div>
 
-    <div class="container" ng-app="myApp">
+    <div class="container" >
 
         <!--Here go the partials -->
-        <div ng-view></div>
+        <div ng-view>
+            <div class="hero-unit">
+                <h1>AngularJS-Bootstrap-JQuery-REST</h1>
+                <h2>Link Design </h2>
+                <p>Esta mini aplicacion se basa en la funcionalidad de depositos SOAT por parte de QBE, para ello se ha implementado el patron Modelo - Vista - Controlador
+                    (cabe señalar que el presente demo es totalmente funcional y la data es traida desde el servidor LINK por medio de fuentes restful), con las siguientes tecnologias. 
+                <ul>
+                <li><a href="http://angularjs.org">AngularJS</a>, </li>
+                <li><a href="http://twitter.github.com/bootstrap/getting-started.html#examples">twitter-bootstrap</a>,</li>
+                <li><a href="http://jquery.com/">jQuery</a> y</li>
+                <li>un API rest alojado en el servidor de Link</li>
+                </ul>
+                Comencemos con el demo.</p>
+
+                <p><a href="deposito.html" class="btn btn-primary btn-large">Pongale Play &raquo;</a></p>
+            </div>
+        </div>
 
         <!-- Footer -->
         <hr/>
